@@ -3,5 +3,8 @@ name = "automated-research-generator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.9"
-dependencies = []
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.31.0",
+    "langgraph>=0.6.11",
+]
