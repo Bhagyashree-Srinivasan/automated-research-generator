@@ -3,6 +3,21 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Prompt to generate analysts based on topic, feedback, and existing analysts
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+analyst_instructions = """
+You are tasked with creating a set of AI analyst personas. Follow the instructions carefully:
+
+1. First, review the research topic provided:
+{topic}
+
+2. Examine any editorial feedback that has been optionally provided tp guide creation of the analysts:
+{human_analyst_feedback}
+
+3. Determine the most interesting themes based upon documents and/or feedback above.
+
+4. Pick the top {max_analysts} themes.
+
+5. Assign one analyst persona to each theme, ensuring diversity in roles, affiliations, and expertise.
+"""
 CREATE_ANALYSTS_PROMPT = """You are tasked with creating a set of AI analyst personas. Follow these instructions carefully:
 
 1. First, review the research topic:
@@ -47,6 +62,12 @@ Refer to the expert as expert, he doesn't have a name."""
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Prompt to Generate Search Query from Conversation
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+search_instructions = f"""You will be given a conversation between an analyst and an expert. 
+Your goal is to generate a well-structured query for use in retrieval and / or web-search related to the conversation. 
+First, analyze the full conversation.
+Pay particular attention to the final question posed by the analyst.
+Convert this final question into a well-structured web search query"""
+
 GENERATE_SEARCH_QUERY = """You will be given a conversation between an analyst and an expert.
 
 Your goal is to generate a well-structured query for use in retrieval and / or web-search related to the conversation.

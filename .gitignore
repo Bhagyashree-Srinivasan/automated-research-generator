@@ -10,3 +10,4 @@ wheels/
 .venv
 .env
 research_and_analysis/notebook/logs/
+logs/
