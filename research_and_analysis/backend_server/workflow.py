@@ -355,7 +355,7 @@ if __name__ == "__main__":
     reporter = AutonomousReportGenerator(llm)
     graph = reporter.build_graph()
     
-    topic = "AI in sports analytics"
+    topic = "The realistic impact of AI in education of people with autism"
     thread = {"configurable": {"thread_id": "1"}}
     
     for _ in graph.stream({"topic": topic, "max_analysts": 3}, thread, stream_mode = "values"):
