@@ -34,5 +34,5 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["research_and_analysis"]
-include = ["AUTOMATED-RESEARCH-GENERATOR*"]
+# include = ["AUTOMATED-RESEARCH-GENERATOR*"]
 
