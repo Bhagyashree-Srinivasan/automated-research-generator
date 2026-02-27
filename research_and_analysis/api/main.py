@@ -9,7 +9,7 @@ from datetime import datetime
 app = FastAPI(title="Autonomous Report Generator UI")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="research_and_analyst/api/templates")
+templates = Jinja2Templates(directory="research_and_analysis/api/templates")
 app.templates = templates #so templates are accessible inside router
 
 def basename_filter(path: str):
